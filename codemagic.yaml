@@ -11,7 +11,7 @@ workflows:
             include: true
             source: true
       scripts:
-        - cd flutter_module_using_plugin && flutter package pub get
+        - cd flutter_module_using_plugin && flutter packages pub get
         - cd android_using_plugin && ./gradlew build
       artifacts:
         - android_using_plugin/app/build/outputs/**/**/*.apk
