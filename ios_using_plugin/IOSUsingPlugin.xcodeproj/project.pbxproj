@@ -333,7 +333,7 @@
 			name = "[CP-User] Run Flutter Build Script";
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module_using_plugin/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build";
+			shellScript = "set -e\nset -u\nsource \"${SRCROOT}/../flutter_module_using_plugin/.ios/Flutter/flutter_export_environment.sh\"\n\"$FLUTTER_ROOT\"/packages/flutter_tools/bin/xcode_backend.sh build\n";
 		};
 		7EE0349058A10AC76854983D /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -580,7 +580,7 @@
 			baseConfigurationReference = D2BE8518A3FAC05A3EF43C4A /* Pods-IOSUsingPlugin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                BITCODE_GENERATION_MODE = bitcode;
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X8NNQ9CYL2;
@@ -602,7 +602,7 @@
 			baseConfigurationReference = 9EF4D3F69A8A2DAF318D5D8F /* Pods-IOSUsingPlugin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                BITCODE_GENERATION_MODE = bitcode;
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = X8NNQ9CYL2;
@@ -624,7 +624,7 @@
 			baseConfigurationReference = 032CDFB4BAD705AEB8061984 /* Pods-IOSUsingPluginTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BITCODE_GENERATION_MODE = bitcode;
+				BITCODE_GENERATION_MODE = bitcode;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IOSUsingPluginTests/Info.plist;
@@ -646,7 +646,7 @@
 			baseConfigurationReference = 4575FC96630AA8622F3BFC28 /* Pods-IOSUsingPluginTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BITCODE_GENERATION_MODE = bitcode;
+				BITCODE_GENERATION_MODE = bitcode;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IOSUsingPluginTests/Info.plist;
@@ -668,7 +668,7 @@
 			baseConfigurationReference = BF8095192EC0A98CBABFC968 /* Pods-IOSUsingPluginUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BITCODE_GENERATION_MODE = bitcode;
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IOSUsingPluginUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -689,7 +689,7 @@
 			baseConfigurationReference = 256E81164BC118D2D32C497F /* Pods-IOSUsingPluginUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BITCODE_GENERATION_MODE = bitcode;
+				BITCODE_GENERATION_MODE = bitcode;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = IOSUsingPluginUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
