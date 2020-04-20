@@ -1,0 +1,17 @@
+workflows:
+    react-native:
+      name: react native
+      environment:
+        flutter: stable
+      triggering:
+        events:
+          - push
+        branch_patterns:
+          - pattern: 'android_using_plugin'
+            include: true
+            source: true
+      scripts:
+        - cd flutter_module_using_plugin && flutter package pub get
+        - cd android_using_plugin && ./gradlew build
+      artifacts:
+        - android_using_plugin/app/build/outputs/**/**/*.apk
