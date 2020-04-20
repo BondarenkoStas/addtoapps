@@ -30,6 +30,6 @@ workflows:
           cd flutter_module 
           flutter pub get
           flutter build aar
-        - cd android_using_prebuilt_module && ./gradlew assembleRelease
+        - cd android_using_prebuilt_module && ./gradlew assemble
       artifacts:
         - android_using_prebuilt_module/app/build/outputs/**/**/*.apk
