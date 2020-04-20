@@ -32,4 +32,6 @@ workflows:
           flutter build aar
         - cd android_using_prebuilt_module && ./gradlew assembleRelease
       artifacts:
+        - android_using_prebuilt_module/app/build/outputs/**/*.apk
         - android_using_prebuilt_module/app/build/outputs/**/**/*.apk
+        - $FCI_BUILD_DIR/android_using_prebuilt_module/app/build/outputs/**/**/*.apk
