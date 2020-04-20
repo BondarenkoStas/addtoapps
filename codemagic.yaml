@@ -32,8 +32,8 @@ workflows:
         - |
           cd flutter_module_using_plugin
           flutter pub get
-          cd .ios
-          pod install
+          flutter build ios --release --no-codesign
+          cd .ios && pod install
         - cd ios_using_plugin && pod deintegrate && pod install
         - xcode-project use-profiles
         - xcode-project build-ipa --workspace "ios_using_plugin/IOSUsingPlugin.xcworkspace" --scheme "IOSUsingPlugin"
