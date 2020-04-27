@@ -32,9 +32,6 @@ workflows:
         - |
           cd flutter_module
           flutter pub get
-          cd .ios
-          pod install
-          cd ..
           flutter build ios-framework --output=$FCI_BUILD_DIR/ios_using_prebuilt_module/Flutter
         - xcode-project use-profiles
         - xcode-project build-ipa --project "ios_using_prebuilt_module/IOSUsingPrebuiltModule.xcodeproj" --scheme "IOSUsingPrebuiltModule"
