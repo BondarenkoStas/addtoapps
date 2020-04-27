@@ -29,11 +29,9 @@ workflows:
           # set up signing certificate
           echo $CM_CERTIFICATE | base64 --decode > /tmp/certificate.p12
           keychain add-certificates --certificate /tmp/certificate.p12 --certificate-password $CM_CERTIFICATE_PASSWORD
-        - cd ios_using_plugin && pod install
         - |
           cd flutter_module_using_plugin
           flutter pub get
-          cd .ios && pod install
           cd .. && flutter build ios-framework --output=../ios_using_prebuilt_module/Flutter
         - xcode-project use-profiles
         - xcode-project build-ipa --workspace "ios_using_plugin/IOSUsingPrebuiltModule.xcworkspace" --scheme "IOSUsingPrebuiltModule"
