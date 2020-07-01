@@ -9,7 +9,7 @@ workflows:
         events:
           - push
         branch_patterns:
-          - pattern: 'ios_flutter_module'
+          - pattern: 'ios_flutter_module_no_codesign'
             include: true
             source: true
       scripts:
