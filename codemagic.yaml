@@ -19,6 +19,6 @@ workflows:
           flutter build ios --release --no-codesign
           cd .ios && pod install
         - cd ios_using_plugin && pod deintegrate && pod install
-        - xcodebuild -workspace "ios_using_plugin/IOSUsingPlugin.xcworkspace" -scheme "IOSUsingPlugin" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
+        - cd ios_using_plugin && xcodebuild -workspace "IOSUsingPlugin.xcworkspace" -scheme "IOSUsingPlugin" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO build
       artifacts:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
