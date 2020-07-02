@@ -22,6 +22,6 @@ workflows:
           # build iOS project
           cd ios_using_prebuilt_module
           pod install
-          xcodebuild build -workspace "IOSUsingPrebuiltModule.xcworkspace" -scheme "IOSUsingPrebuiltModule" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+          xcodebuild build -project "IOSUsingPrebuiltModule.xcodeproj" -scheme "IOSUsingPrebuiltModule" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
       artifacts:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
