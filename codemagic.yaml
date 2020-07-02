@@ -13,6 +13,6 @@ workflows:
       scripts:
         - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android_using_plugin/local.properties"
         - cd flutter_module_using_plugin && flutter pub get
-        - cd android_using_plugin && ./gradlew build
+        - cd android_using_plugin && ./gradlew assembleDebug
       artifacts:
         - android_using_plugin/app/build/outputs/**/**/*.apk
