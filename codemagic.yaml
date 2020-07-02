@@ -16,7 +16,7 @@ workflows:
         - |
           cd flutter_module_using_plugin
           flutter pub get
-          flutter build ios --debug --no-codesign
+          flutter build ios --release --no-codesign
           cd .ios && pod install
         - cd ios_using_plugin && pod install
         - cd ios_using_plugin && xcodebuild build -workspace "IOSUsingPlugin.xcworkspace" -scheme "IOSUsingPlugin" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
