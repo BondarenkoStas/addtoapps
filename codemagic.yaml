@@ -7,7 +7,7 @@ workflows:
         events:
           - push
         branch_patterns:
-          - pattern: 'android_using_plugin'
+          - pattern: 'android_using_plugin_no_codesign'
             include: true
             source: true
       scripts:
