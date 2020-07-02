@@ -21,6 +21,6 @@ workflows:
         - cd ios_using_plugin && pod deintegrate && pod install
         - |
           cd ios_using_plugin
-          xcodebuild build -workspace "IOSUsingPlugin.xcworkspace" -scheme "IOSUsingPlugin"
+          xcodebuild build -workspace "IOSUsingPlugin.xcworkspace" -scheme "IOSUsingPlugin" CODE_SIGN_IDENTITY="" CODE_SIGN_ENTITLEMENTS = "" PROVISIONING_PROFILE = "" CODE_SIGNING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
       artifacts:
         - $HOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.app
